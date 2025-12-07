@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lihat Data Tersimpan - Aplikasi Pemesanan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-registration"> <!-- Gunakan tema sama -->
+    <div class="container">
+        <h2>Data Registrasi Tersimpan</h2>
+        <div id="dataContainer">
+            <p>Data akan muncul di sini jika ada.</p>
+        </div>
+        <button id="clearBtn">Hapus Semua Data</button>
+        <br><br>
+        <a href="index.html" style="color: white;">Kembali ke Halaman Mulai</a>
+    </div>
+    <script>
+        // Fungsi untuk menampilkan data dari localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const dataContainer = document.getElementById('dataContainer');
+            const storedData = JSON.parse(localStorage.getItem('registrationData')) || [];
+
+            if (storedData.length > 0) {
+                let html = '<ul>';
+                storedData.forEach((item, index) => {
+                    html += `<li><strong>Entry ${index + 1} (${item.timestamp}):</strong><br>
+                        - IG Like: ${item.igLike}<br>
+                        - TikTok Like: ${item.tiktokLike}<br>
+                        - IG Viewers: ${item.igViewers}<br>
+                        - TikTok Viewers: ${item.tiktokViewers}<br>
+                        - Akun: ${item.accountUrl}</li><br>`;
+                });
+                html += '</ul>';
+                dataContainer.innerHTML = html;
+            } else {
+                dataContainer.innerHTML = '<p>Tidak ada data tersimpan.</p>';
+            }
+
+            // Fungsi untuk menghapus data
+            document.getElementById('clearBtn').addEventListener('click', function() {
+                if (confirm('Yakin ingin menghapus semua data?')) {
+                    localStorage.removeItem('registrationData');
+                    location.reload(); // Reload halaman
+                }
+            });
+        });
+    </script>
+</body>
+</html>

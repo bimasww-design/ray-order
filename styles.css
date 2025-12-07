@@ -1,0 +1,132 @@
+/* Reset dan font umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Halaman umum */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Tema Halaman Mulai, Registrasi, dan Admin (Hitam Biru) */
+.page-start,
+.page-registration,
+.page-admin {
+    background: linear-gradient(135deg, #000000, #00008B); /* Gradien hitam ke biru */
+    color: white; /* Teks putih untuk kontras */
+}
+
+.page-start h1,
+.page-registration h2,
+.page-admin h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#startBtn {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#startBtn:hover {
+    background: #0056b3;
+}
+
+/* Styling khusus untuk halaman registrasi */
+.page-registration .container {
+    max-width: 400px;
+    width: 100%;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid white; /* Tambahkan border putih untuk kontras di background gelap */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white; /* Pastikan label terlihat */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9); /* Background input semi-transparan untuk kontras */
+    color: black; /* Teks input hitam */
+}
+
+input:focus {
+    border-color: #007BFF; /* Fokus biru */
+}
+
+#finishBtn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+#finishBtn:hover {
+    background: #218838;
+}
+
+/* Styling untuk halaman admin */
+.page-admin .container {
+    max-width: 800px;
+    width: 100%;
+}
+
+#dataContainer {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparan untuk kontras */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid white;
+    text-align: left;
+}
+
+th {
+    background: rgba(0, 123, 255, 0.5);
+}

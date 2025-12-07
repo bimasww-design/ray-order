@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Registrasi - Aplikasi Pemesanan</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link ke CSS -->
+</head>
+<body class="page-registration"> <!-- Kelas untuk tema putih -->
+    <div class="container">
+        <img src="asset/ray.png" alt="Logo" class="logo"> <!-- Ganti dengan path logo Anda -->
+        <h2>Ayo Registrasi untuk Upgrade Sosial Media</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="igLike">URL Instagram Like:</label>
+                <input type="url" id="igLike" name="igLike" placeholder="Masukkan URL" required>
+            </div>
+            <div class="form-group">
+                <label for="tiktokLike">URL TikTok Like:</label>
+                <input type="url" id="tiktokLike" name="tiktokLike" placeholder="Masukkan URL" required>
+            </div>
+            <div class="form-group">
+                <label for="igViewers">URL Instagram Viewers:</label>
+                <input type="url" id="igViewers" name="igViewers" placeholder="Masukkan URL" required>
+            </div>
+            <div class="form-group">
+                <label for="tiktokViewers">URL TikTok Viewers:</label>
+                <input type="url" id="tiktokViewers" name="tiktokViewers" placeholder="Masukkan URL" required>
+            </div>
+            <div class="form-group">
+                <label for="accountUrl">URL Akun:</label>
+                <input type="url" id="accountUrl" name="accountUrl" placeholder="Masukkan URL" required>
+            </div>
+            <button type="submit" id="finishBtn">Selesai</button>
+        </form>
+    </div>
+    <script src="script.js"></script> <!-- Link ke JS -->
+</body>
+</html>
